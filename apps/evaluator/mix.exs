@@ -32,6 +32,10 @@ defmodule Evaluator.Mixfile do
   #   {:myapp, in_umbrella: true}
   #
   # Type `mix help deps` for more examples and options
+  defp deps(:test) do
+    [ { :line_sigil, path: "../line_sigil" } ] ++ deps(:default)
+  end
+
   defp deps do
     []
   end
